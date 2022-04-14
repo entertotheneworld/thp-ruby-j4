@@ -2,7 +2,7 @@ require "./00_journalists.rb"
 require "./01_cryptocurrencies.rb"
 
 
-################ Cryptocurrencies
+################ CRYPTOCURRENCIES
 
 def main_cryptocurrencies
     puts "----------------------------------------------------"
@@ -38,7 +38,7 @@ def perform_cryptocurrencies
 end
 
 
-################ Journalists
+################ JOUNALISTS
 def main_journalists
     puts "----------------------------------------------------"
     tab = ["Combien y a t-il de handle ?","Quel est le handle le plus court ?","Combien y-a-t'il de hanle contenant 5 caractères ?","Combien de handle commencent par une majucule ?", "Liste des handle par ordre alphabétique", "Liste des handle trier par taille", "Position de la personne @epenser","Répartition des handle par taille (nb handle avec 1 caractre, nb handle avec 2 caractere etc.)","Revenir au menu principal"]
@@ -81,7 +81,7 @@ def perform_journalists
     end
 end
 
-################ Main
+################ MAIN
 def main 
     puts "----------------------------------------------------"
     tab = ["Journalistes","Crypto","Quittez le programme"]
