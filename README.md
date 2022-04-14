@@ -10,11 +10,10 @@ $ cd lib
 
 ## 2. Testing
 
-run the exercise of your choice
+run main.rb
 
 ```bash
-$ ruby 00_journalists.rb
-$ ruby 01_cryptocurrencies.rb
+$ ruby main.rb
 ```
 
 ## 3. Enjoy

@@ -103,38 +103,3 @@ def repartition_handle
         puts "Il y as #{count} handle avec #{carac} caractére"
     end
 end
-
-def perform
-    choice = main
-    case choice
-    when 1
-        number_handle
-    when 2
-        shortest_handle
-    when 3
-        handle_five_characters
-    when 4
-        handle_start_uppercase
-    when 5
-        puts "La tu m'en demande trop"
-        puts "Appuyer sur entree pour quitter"
-        gets.chomp.to_i
-        puts "Non, je rigole, j'ai galérer mais j'y suis arrivé !!"
-        alphabetical_order
-    when 6
-        size_list = size_handle
-        puts "Le tableau trier par taille croissante :\n#{size_list}"
-    when 7
-        handle_position
-    when 8
-        repartition_handle
-    when 9
-        puts "À bientôt ! On t'attend pour encore plus d'aventures"
-        return choice
-    end
-end
-
-loop do 
-    choice = perform
-    break if choice == 9
-end

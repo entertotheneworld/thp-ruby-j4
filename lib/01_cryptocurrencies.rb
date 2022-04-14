@@ -17,20 +17,6 @@ prices.each {|val|
 # Fusion des deux tableau (coins et price) en un hash
 @coins_values = Hash[coins.zip(price)]
 
-# Menu principal du programme
-def main 
-    puts "----------------------------------------------------"
-    tab = ["La ou les crypto qui ont la plus grosse valeur","La ou les crypto qui ont la plus petite valeur","Les devises dont le cours est inférieur à 6000","La devise la plus chère parmi celle dont le cours est inférieur à 6000","Quittez le programme"]
-    tab.each_with_index{|val,i| puts "#{i+1}. #{val}"}
-    puts "----------------------------------------------------"
-    choice = 0
-    while choice < 1 || choice > 5
-        puts "Votre choix :"
-        choice = gets.chomp.to_i
-    end
-    return choice
-end
-
 def biggest_value
     @coins_values.each {|k,v|
         puts "Le coin #{k} à la plus grande valeur : #{v}" if v == @coins_values.values.max
@@ -58,31 +44,4 @@ def biggest_value_less_than_6000
     below_6000.each {|k,v|
         puts "Le coin #{k} à la plus grande valeur parmis tous les coins inférieur à 6000: #{v}" if v == below_6000.values.max
     }
-end
-
-
-def perform
-    choice = main
-    case choice
-    when 1
-        biggest_value
-    when 2
-        samllest_value
-    when 3
-        below_6000 = less_than_6000
-        puts "Voici la liste des devises dont le cours est inférieur à 6000"
-        below_6000.each_key {|k|
-            puts k
-        }
-    when 4
-        biggest_value_less_than_6000
-    when 5
-        puts "À bientôt ! On t'attend pour encore plus d'aventures"
-        return choice
-    end
-end
-
-loop do 
-    choice = perform
-    break if choice == 5
 end
